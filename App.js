@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
+    // initial state that will be mount as the page loads
     this.state = {
-    //   count: "",
         fullName: '',
         bio: '',
         img: 'https://i.pinimg.com/236x/b6/66/5a/b6665a5b7916210651a3636fb2ca9f64.jpg',
@@ -13,6 +13,7 @@ class App extends Component {
     };
   }
 
+  // the setState or new state thats updated 
   updateFullN = () => {
     this.setState({ fullName: "Peter Paul" });
   };
@@ -28,6 +29,7 @@ class App extends Component {
     updateOccup = () => {
           this.setState({ occup: 'front-End engineer' });
   };
+  // the update handler for thats called upon for stae to change 
     Updater = () => {
         this.updateFullN();
         this.updateBio();
@@ -37,6 +39,7 @@ class App extends Component {
     
   render() {
     return (
+      // the element tags 
       <div className='container'>
 
             <h4>full Name:{this.state.fullName}</h4>
@@ -46,7 +49,7 @@ class App extends Component {
 
             {/* <button onClick={this.Updater}>update state</button> */}
             
-
+// toggle switch
 
     <div class = 'toggle-switch'>
     <label>
