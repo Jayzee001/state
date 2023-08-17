@@ -1,0 +1,102 @@
+:root {
+  --light: #d8dbe0;
+  --dark: #d8d;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.container{
+  height:65vh;
+  width: 75vw;
+  margin-top: 5rem;
+  display: flex;
+  border-radius: 4%;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfafaf;
+  flex-direction: column;
+  border: 1px solid lightblue;
+  box-shadow: 10px 6px 15px whitesmoke;
+}
+img{
+  height: 150px;
+  width:100px;
+  display: block;
+  border-radius: 10px;
+}
+.toggle-switch {
+  position: relative;
+  width: 10rem;
+  height: 1rem;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  width: 75px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: inset 80px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(60px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+a {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  top: 100px;
+  left: 10px;
+  font-size: 10px;
+  text-decoration: none;
+  color: var(--link);
+  font-weight: bold;
+  text-align: center;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+
+    /* top: 13px;
+    left: 16px;
+    width: 75px; */
